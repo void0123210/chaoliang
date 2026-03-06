@@ -1,22 +1,36 @@
 ---
 permalink: /
-title: "I am a PhD student working on acoustic signal processing and active noise control."
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
+I am a PhD student working on acoustic signal processing and active noise control.
 
+My research focuses on spatial-temporal sound field prediction and intelligent acoustic systems.
 
-My research focuses on:
+My work combines:
 
-- Active Noise Control (ANC)
-- Spatial-temporal sound field prediction
-- Deep learning for acoustics
-- Microphone array signal processing
+- Active Noise Control (ANC)  
+- Acoustic signal processing  
+- Spatial sound field prediction  
+- Real-time DSP implementation
 
-I develop algorithms for real-time acoustic systems and intelligent sound field control.
+## Research Interests
+
+- Active Noise Control
+- Acoustic Signal Processing
+- Spatial-temporal Sound Field Prediction
+- Deep Learning for Acoustics
+- Microphone Array Processing
+
+## News
+
+2025 – Research on adaptive neural networks for sound field prediction.
+
+2023 – Started PhD research in acoustic signal processing.
 
 A data-driven personal website
 ======
