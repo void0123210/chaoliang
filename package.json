@@ -1,10 +1,10 @@
 {
-  "name": "academic-pages",
+  "name": "chao-liang-personal-website",
   "version": "0.8.1.1",
-  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "description": "Frontend build scripts for Chao Liang's personal website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/academicpages/academicpages.github.io"
+    "url": "https://github.com/void0123210/chaoliang.git"
   },
   "keywords": [
     "jekyll",
@@ -17,9 +17,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/academicpages/academicpages.github.io/issues"
+    "url": "https://github.com/void0123210/chaoliang/issues"
   },
-  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "homepage": "https://void0123210.github.io/chaoliang/",
   "engines": {
     "node": ">= 0.10.0"
   },

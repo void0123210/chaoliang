@@ -1,0 +1,46 @@
+---
+layout: archive
+title: "Writings"
+permalink: /writings/
+author_profile: true
+---
+
+<p>
+  A place for essays, travel notes, reflections, and observations beyond my
+  academic work. These writings may move between research, cities, books,
+  running, and the small experiences that shape how I think.
+</p>
+
+{% assign writings = site.writings | sort: "date" | reverse %}
+
+{% if writings.size > 0 %}
+  {% assign writing_types = "Essay,Travel,Reflection,Notes" | split: "," %}
+  {% for writing_type in writing_types %}
+    {% assign type_shown = false %}
+    {% for post in writings %}
+      {% if post.type == writing_type %}
+        {% unless type_shown %}
+          <h2>{{ writing_type }}</h2>
+          <hr />
+          {% assign type_shown = true %}
+        {% endunless %}
+        <article class="archive__item">
+          <h3 class="archive__item-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          {% if post.date or post.travel_period %}
+          <p class="page__meta">
+            {% if post.date %}<span>写作时间：<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</time></span>{% endif %}
+            {% if post.travel_period %}<span> · 旅行时间：{{ post.travel_period }}</span>{% endif %}
+          </p>
+          {% endif %}
+          {% if post.excerpt %}
+            <p class="archive__item-excerpt">{{ post.excerpt | markdownify | strip_html }}</p>
+          {% endif %}
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  <p><em>The first piece is being prepared.</em></p>
+{% endif %}

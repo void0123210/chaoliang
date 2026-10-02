@@ -38,6 +38,9 @@ layout: default
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.travel_period %}
+          <p class="page__date"><strong>写作时间：</strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time></p>
+          <p class="page__date"><strong>旅行时间：</strong>{{ page.travel_period }}</p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
@@ -46,6 +49,10 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+
+        {% if page.collection == 'writings' %}
+          <p class="writing-back-link"><a href="{{ '/writings/' | relative_url }}">← 返回 Writings</a></p>
+        {% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
@@ -92,6 +99,10 @@ layout: default
       {% include comments.html %}
     {% endif %}
   </article>
+
+  {% if page.collection == 'writings' %}
+    <script src="{{ '/assets/js/writing-gallery.js' | relative_url }}" defer></script>
+  {% endif %}
 
   {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}

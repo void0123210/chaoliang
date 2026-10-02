@@ -19,5 +19,8 @@ package-lock.json
 # Ignore folders related to IDEs
 .vscode/
 
+# Private source documents used to prepare the public website
+personal material/
+
 # Ignore files created by MacOS
 .DS_Store

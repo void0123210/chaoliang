@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Chao Liang"
 title_separator          : "-"
 name                     : &name "Chao Liang"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Academic portfolio of Chao Liang, focusing on acoustic signal processing, active noise control, and spatial-temporal sound field prediction."
 url                      : https://void0123210.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "/chaoliang" # the subpath of your site, e.g. "/blog"
@@ -23,14 +23,14 @@ repository: "void0123210/chaoliang"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile-milano-2026.jpg"
   name             : "Chao Liang"
   pronouns         : # example: "she/her"  
-  bio              : "PhD candidate in Active Noise Control"
-  location         : "Earth"
+  bio              : "Ph.D. in Mechanical Engineering | Active noise control and sound-field prediction"
+  location         : "Milan, Italy"
   employer         : "Politecnico di Milano"
   uri              : # URL
-  email            : "liangchaoxjtu9@gmail.com" 
+  email            : "chao.liang@polimi.it"
 
   # Academic websites
   academia         : # URL
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "liang-chao-2021"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -97,33 +97,8 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  provider               :
 atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
@@ -164,13 +139,11 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
-  - .github
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/_main.js
@@ -179,7 +152,6 @@ exclude:
   - CHANGELOG
   - Capfile
   - config
-  - Dockerfile
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
@@ -221,33 +193,16 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
+  writings:
     output: true
-    permalink: /:collection/:path/
+    permalink: /writings/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -255,39 +210,20 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
+  # _writings
   - scope:
       path: ""
-      type: teaching
+      type: writings
     values:
       layout: single
       author_profile: true
       share: true
-      comments: true
   # _publications
   - scope:
       path: ""
       type: publications
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
       author_profile: true
       share: true
 

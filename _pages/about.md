@@ -7,27 +7,21 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student working on acoustic signal processing and active noise control.
+I received my **Ph.D. in Mechanical Engineering** from Politecnico di Milano in 2026 and was a Marie Skłodowska-Curie Actions fellow in the IN-NOVA doctoral network.
 
-My research focuses on spatial-temporal sound field prediction and intelligent acoustic systems.
+My work connects **active noise control**, **adaptive signal processing**, **model-predictive control**, and **deep learning for acoustics**. I am particularly interested in methods that remain practical under propagation delays, changing acoustic paths, limited sensing, and real-time computing constraints.
 
-My work combines:
+- [Research]({{ '/research/' | relative_url }}) explains the technical questions and experimental work.
+- [Publications]({{ '/publications/' | relative_url }}) collects journal articles and paper links.
+- [CV]({{ '/cv/' | relative_url }}) provides education, experience, skills, and service.
+- [Writings]({{ '/writings/' | relative_url }}) contains essays, travel notes, and reflections beyond research.
 
-- Active Noise Control (ANC)  
-- Acoustic signal processing  
-- Spatial sound field prediction  
-- Real-time DSP implementation
+## Selected Publications
 
-## Research Interests
+- [A stepwise simultaneous perturbation stochastic approximation algorithm for stability improvement of active noise control systems]({{ '/publication/2025-mssp' | relative_url }}), *Mechanical Systems and Signal Processing*, 2025.
+- [Real-time implementation of delayed model predictive control in active noise control systems]({{ '/publication/2026-jsv-mpc' | relative_url }}), *Journal of Sound and Vibration*, 2026.
+- [Adaptive far-field spatial-temporal sound prediction using attentive one-dimensional U-Net]({{ '/publication/2025-jsv' | relative_url }}), *Journal of Sound and Vibration*, 2025.
 
-- Active Noise Control
-- Acoustic Signal Processing
-- Spatial-temporal Sound Field Prediction
-- Deep Learning for Acoustics
-- Microphone Array Processing
+[View all publications]({{ '/publications/' | relative_url }})
 
-## News
-
-2025 – Research on adaptive neural networks for sound field prediction.
-
-2023 – Started PhD research in acoustic signal processing.
+You can also find my research outputs on [Google Scholar](https://scholar.google.com/citations?user=0i1xOqIAAAAJ).

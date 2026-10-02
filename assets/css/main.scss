@@ -41,3 +41,62 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+.writing-photo {
+  margin: 1.25rem auto 2rem;
+  text-align: center;
+}
+
+.writing-photo img {
+  width: 56%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+@media (max-width: 600px) {
+  .writing-photo img {
+    width: 92%;
+  }
+}
+
+.writing-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 5rem;
+  background: rgba(0, 0, 0, .92);
+}
+
+.writing-lightbox.is-open { display: flex; }
+.writing-lightbox__image { max-width: 100%; max-height: 100%; object-fit: contain; }
+.writing-lightbox__button {
+  position: absolute;
+  border: 0;
+  color: #fff;
+  background: rgba(40, 40, 40, .75);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: .7rem .9rem;
+}
+.writing-lightbox__close { top: 1rem; right: 1rem; }
+.writing-lightbox__previous { left: 1rem; top: 50%; transform: translateY(-50%); }
+.writing-lightbox__next { right: 1rem; top: 50%; transform: translateY(-50%); }
+.writing-lightbox__counter {
+  position: absolute;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+.writing-back-link { margin-top: 2rem; }
+
+@media (max-width: 600px) {
+  .writing-lightbox { padding: 3.5rem 1rem; }
+  .writing-lightbox__previous { left: .25rem; }
+  .writing-lightbox__next { right: .25rem; }
+}
